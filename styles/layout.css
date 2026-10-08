@@ -1,0 +1,26 @@
+.app-shell { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
+.app-header { position: sticky; top: 0; z-index: 50; display: grid; grid-template-columns: minmax(240px, 320px) minmax(240px, 1fr) auto; gap: var(--space-4); align-items: center; padding: var(--space-4) var(--space-5); border-bottom: 1px solid var(--color-border); background: color-mix(in srgb, var(--color-background) 86%, transparent); backdrop-filter: blur(16px); }
+.header-brand-group, .header-actions { display: flex; align-items: center; gap: var(--space-3); }
+.brand { display: flex; align-items: center; gap: var(--space-3); min-width: 0; }
+.brand strong { display: block; font-size: 1.1rem; letter-spacing: -0.02em; }
+.brand small { display: block; color: var(--color-muted); font-size: .76rem; line-height: 1.15; }
+.search-shell { position: relative; display: flex; align-items: center; gap: var(--space-2); }
+.search-shell input { width: 100%; border-radius: 999px; padding: .75rem 2.8rem .75rem 1rem; }
+.search-shell kbd { position: absolute; right: .85rem; color: var(--color-muted); font-size: .76rem; pointer-events: none; }
+.app-body { display: grid; grid-template-columns: 292px minmax(0, 1fr); min-height: 0; }
+.sidebar { border-right: 1px solid var(--color-border); padding: var(--space-5); background: color-mix(in srgb, var(--color-card) 58%, transparent); overflow: auto; }
+.sidebar-section { margin-bottom: var(--space-6); }
+.sidebar-title { display: flex; justify-content: space-between; align-items: center; margin: 0 0 var(--space-2); color: var(--color-muted); font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.sidebar-link { display: flex; justify-content: space-between; gap: var(--space-2); padding: .58rem .75rem; border-radius: var(--radius-md); color: var(--color-muted); transition: background .15s ease, color .15s ease, transform .15s ease; }
+.sidebar-link:hover, .sidebar-link.active { background: rgba(59, 130, 246, .13); color: var(--color-text); }
+.sidebar-link:hover { transform: translateX(2px); }
+.main-content { padding: var(--space-6); overflow: auto; }
+.app-footer { display: flex; gap: var(--space-4); justify-content: center; align-items: center; padding: var(--space-4); border-top: 1px solid var(--color-border); color: var(--color-muted); font-size: .9rem; }
+.drawer-backdrop { position: fixed; inset: 0; z-index: 70; background: rgba(2, 6, 23, .58); }
+.home-hero { padding: var(--space-8); border: 1px solid var(--color-border); border-radius: var(--radius-xl); background: linear-gradient(135deg, rgba(59, 130, 246, .16), rgba(56, 189, 248, .06)), var(--color-card); box-shadow: var(--shadow-soft); }
+.home-hero h1 { margin: 0; font-size: clamp(2rem, 6vw, 4rem); line-height: .95; letter-spacing: -0.06em; }
+.home-hero p { max-width: 720px; color: var(--color-muted); font-size: 1.08rem; }
+.tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-4); margin-top: var(--space-5); }
+.tool-header { display: flex; justify-content: space-between; gap: var(--space-4); align-items: start; margin-bottom: var(--space-5); }
+.tool-header h1 { margin: 0; letter-spacing: -0.04em; }
+.tool-header p { margin: .35rem 0 0; color: var(--color-muted); }

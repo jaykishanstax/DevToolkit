@@ -1,0 +1,22 @@
+.mobile-menu-button { display: none; }
+@media (max-width: 980px) {
+  .app-header { grid-template-columns: 1fr auto; }
+  .search-shell { grid-column: 1 / -1; }
+  .mobile-menu-button { display: inline-flex; }
+  .app-body { grid-template-columns: 1fr; }
+  .sidebar { position: fixed; inset: 0 auto 0 0; z-index: 80; width: min(320px, 86vw); transform: translateX(-105%); transition: transform .18s ease; box-shadow: var(--shadow-soft); background: var(--color-card); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: var(--space-4); }
+  .tool-layout, .tool-layout.three { grid-template-columns: 1fr; }
+  .tool-header { flex-direction: column; }
+  .brand small { display: none; }
+}
+@media (max-width: 640px) {
+  .app-header { padding: var(--space-3); gap: var(--space-3); }
+  .header-actions .button-secondary { display: none; }
+  .home-hero { padding: var(--space-5); }
+  .app-footer { flex-wrap: wrap; }
+  .hash-row { grid-template-columns: 1fr; }
+  .toolbar { align-items: stretch; }
+  .toolbar .button, .toolbar button { flex: 1 1 auto; }
+}
